@@ -1,0 +1,149 @@
+#wrapper{
+    width: 960px;
+    height:500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clr{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    color: #1b6791;
+}
+
+hr{
+    opacity: 0.5;
+}
+/* HEADER */
+.banner{
+    padding: 0 10px;
+}
+    .banner img{
+        height: 40px;
+        float: left;
+    }
+    .banner .help{
+        float: right;
+    }
+        .banner .help a{
+            margin-right: 10px;
+        }
+.intro{
+    margin: 20px 0;
+}
+.intro .hello{
+    width: 660px;
+    float: left;
+}
+    .intro .hello img{
+        height: 100px;
+        float: left;
+    }
+    .intro .hello .txt{
+        width:400px;
+        float: left;
+        padding: 0 50px 0 20px;
+    }
+        .intro .hello .txt h3{
+            color: #58257B;
+            margin: 12px 0;
+        }
+        .intro .hello .txt p{
+            text-align: justify;
+        }
+
+.intro .login{
+    width: 290px;
+    float: right;
+}
+    .intro .login .btn-login{
+        text-align: center;
+        
+    }
+    .intro .login .btn-login a{
+        border: 1px solid black;
+        padding: 7px 15px;
+        border-radius: 7px;
+        background-color: #58257b;
+        color: white;
+    }
+    .intro .login .link-forgot{
+        font-weight: bold;
+        text-align: center;
+    }
+    .intro .login .link-forgot a{
+        color: #58257b;
+        font-size: 13px;
+    }
+/* Main */
+.lang{
+    float: right;
+}
+
+.input{
+    width: 800px;
+}
+    .input table{
+        width: 100%;
+    }
+    .input tr{
+        margin-bottom: 10px;
+    }
+    .input td{
+        width: 30%;
+    }
+    .input input{
+            padding: 5px;
+            width: 90%;
+            margin-bottom: 5px;
+            border-radius:2px;
+    }
+    .input label{
+            text-align: right;
+            display: block;
+            padding-right: 10px;
+
+    }
+    .input p{
+        color:#58257b;
+        font-weight: bold;
+    }
+
+    .input .ckbox p{
+        color: black;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .input .ckbox{
+        width: 15%;
+        text-align: right;
+    }
+
+    .input .label-inline{
+        display: inline;
+ 
+    }
+    .input .btn-check{
+       width: 2%;
+    }
+
+    .input .sub{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .input input[type=submit]{
+        width: 130px;
+        height: 60px;
+        border: 1px solid black;
+        padding: 7px 15px;
+        border-radius: 7px;
+        background-color: #58257b;
+        color: white;
+        cursor: pointer;
+    }
+    

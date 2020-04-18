@@ -1,0 +1,14 @@
+#wrapper{
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 10px 40px;
+}
+
+.list{
+    list-style-type: upper-roman;
+}
+.list2{
+    list-style-type: disc;
+}

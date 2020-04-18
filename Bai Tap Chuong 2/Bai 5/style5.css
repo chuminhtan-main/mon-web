@@ -1,0 +1,18 @@
+
+#wrapper{
+    margin: 0 auto;
+    width: 700px;
+    height: 1200px;
+    background: url("wallpaper.jpg") top left no-repeat;
+    padding-top: 50px;
+}
+
+h2{
+    color:#F95759;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+video{
+    display: block;
+    margin: 0 auto;
+}

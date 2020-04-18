@@ -1,0 +1,49 @@
+#wrapper{
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+hr{
+    border: 2px solid green;
+}
+
+#wrapper > h2{
+    text-align: center;
+    color: blue;
+    padding: 10px 20px;
+}
+    #wrapper .form-reg{
+        padding: 20px;
+    }
+        #wrapper .form-reg table{
+            width: 100%;
+        }
+        /* table */
+        table{
+            border-collapse: collapse;         
+        }
+        table, td, th{
+            border: 1px solid #04070a;
+        }
+            td{
+                padding-left: 12px;
+                height: 30px;
+            }
+            .submit{
+                text-align: center;
+            }
+        /* input */
+        input[type=text], input[type=password], input[type=date]{
+            border: none;
+            width: 100%;
+        }
+        input[type=submit]{
+            margin: 20px;
+            padding: 10px 15px;
+            color: white;
+            background: blue;
+            border: 1px solid black;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        

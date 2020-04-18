@@ -1,0 +1,26 @@
+#wrapper{
+    width: 500px;
+    height: 500px;
+    background-color:#fcfcd2;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+h3{
+    color: #0e1ded
+}
+h2{
+    color: #0e1ded;
+}
+.line-height{
+    width: 50%;
+    border: 1px solid #999793;
+    margin: 0 auto;
+}
+.txt1{
+    color: red;
+}
+.txt2{
+    font-style: italic;
+    color: #d742f5;
+}

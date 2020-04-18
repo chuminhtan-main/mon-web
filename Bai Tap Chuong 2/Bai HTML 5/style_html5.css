@@ -1,0 +1,135 @@
+body{
+    background-color: #9cc5ea;
+}
+#wrapper{
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0;
+} 
+.clr{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+/* HEADER */
+.title-uit{
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    color: #0858c7;
+}
+    .title-uit p{
+        margin: 0 0 0 20px;
+    }
+.title-hcm{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+    color: #757e8a
+}
+    .title-hcm p{
+        margin: 0 20px 0 0 ;
+    }
+/* --------------------------------------- */
+/* NAVIGATION */
+nav{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color:  #044872;
+    margin-top: -4px;
+}
+    nav .act{
+        color: red;
+    }
+    nav > a{
+        margin: 0 10px;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+/* ----------------------------------------- */
+/* MAIN */
+    /* left main */
+    #left-main{
+        width: 218px;
+        float: left;
+        padding: 0 20px;
+    }
+        #left-main .ads{
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+            background-color: #d8d7d8;
+        }
+            #left-main .ads p{
+                margin: 0;
+            }
+
+    /* right main */
+    #right-main{
+        width:660px;
+        padding: 0 20px;
+        float:right;
+        border-left: 2px solid black;
+    }
+        #right-main img{
+            float: left;
+            margin: 0 30px 30px 0;
+        }
+        #right-main p{
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 35px;
+            font-size: 20px;
+        }
+
+/* FOOTER */
+footer{
+    width:100%;
+    background-color: #004879;
+}
+footer .row-menu{
+    color: white;
+}
+    footer .row-menu ul{
+        width: 25%;
+        float: left;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+        footer .row-menu ul h4{
+            font-weight: bold;
+        }
+        footer .row-menu ul li{
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+            footer .row-menu ul li a{
+                color: white;
+            }
+            footer .row-menu ul li a:hover{
+            color: red;
+        }
+footer .copy{
+    margin: 20px 0 0 20px;
+}
+    footer .copy p{
+        color: #f0b40e;
+        margin: 0;
+        font-size: 12px;
+    }

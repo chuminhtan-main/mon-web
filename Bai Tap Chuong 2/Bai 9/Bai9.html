@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9 - Chương 2</title>
+    <link rel="stylesheet" href="style9.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- HEADER -->
+        <header>
+            <!-- banner -->
+            <div class="banner">
+                <img src="logo.gif" alt="logo-yahoo">
+                <div class="help">
+                    <a href="#">Yahoo!</a>
+                    <a href="#">Trợ giúp</a>
+                </div>    
+                <div class="clr"></div>    
+            </div>
+            <!-- intro - login -->
+            <div class="intro">
+                <div class="hello">
+                    <img src="yahoo.jpg" alt="logo-yahoo">
+                    <div class="txt">
+                        <h3>Chào Bạn!</h3>
+                        <p>Chúng tôi sẽ giúp bạn lập tài khoản Yahoo! 
+                            theo ba bước rất đơn giản! Bạn chỉ cần trả lời một số câu hỏi đơn giản, 
+                            chọn ID và mật khẩu, và thế là xong.</p>
+                    </div>
+                </div>
+                <div class="login">
+                    <p>Bạn đã có ID hoặc địa chỉ Yahoo! Mail?</p>
+                    <p class="btn-login"><a  href="#">Đăng nhập</a></p>
+                    <p class="link-forgot"><a  href="#">Quên mật khẩu hoặc Yahoo! ID của bạn?</a></p>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+        <!-- MAIN -->
+        <hr>
+        <main>
+            <form action="#">
+                <!-- select language -->
+                <section class="lang">
+                    <span>Tôi thích nhận nội dung bằng tiếng</span>
+                    <input list="language" name="language">
+                    <datalist id="language">
+                        <option value="Yahoo! Việt Nam">
+                        <option value="Yahoo! English">
+                    </datalist>
+                </section>
+                <div class="clr"></div>
+                <!-- input info -->
+                <section class="input"> 
+                    <article>
+                        <p>1. Hãy cho chúng tôi biết về bản thân bạn...</p>
+                        <table>
+                            <tr>
+                                <td><label for="first-name">Tên của tôi</label></td>
+                                <td><input type="text" id="first-name" placeholder="Họ"></td>
+                                <td><input type="text" id="last-name" placeholder="Tên"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="gender">Giới Tính</label></td>
+                                <td><input list="gender" name="gender">
+                                    <datalist id="gender">
+                                        <option value="Nam">
+                                        <option value = "Nữ">
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="birthday">Ngày tháng năm sinh</label></td>
+                                <td><input type="date" id="birthday"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="country">Tôi sống tại</label></td>
+                                <td><input list="country" name="country">
+                                    <datalist id="country">
+                                        <option value="Việt Nam">
+                                        <option value="USA">
+                                        <option value="China">
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="code">Mã Bưu Chính</label></td>
+                                <td><input type="text" id="code"></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article>
+                        <p>2. Chọn ID và mật khẩu</p>
+                        <table>
+                            <tr>
+                                <td><label for="mail">Yahoo! ID và Email</label></td>
+                                <td><input type="text" id="mail"></td>
+                                <td><span>@yahoo.com.vn</span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pass">Mật Khẩu</label></td> 
+                                <td><input type="password" id="pass"></td>   
+                            </tr>
+                            <tr>
+                                <td><label for="re-pass">Nhập Lại Mật Khẩu</label></td> 
+                                <td><input type="password" id="re-pass"></td> 
+                            </tr>
+                        </table>
+                    </article>
+                    <article>
+                        <p>3. Để đề phòng trường hợp bạn quên ID hoặc mật khẩu...</p>
+                        <table>
+                            <tr>
+                                <td><label for="mail-replace"><span>Email Thay Thế Khác</span></label></td>
+                                <td><input type="text" id="mail-replace"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><label for="ques">Câu Hỏi Bảo Mật</label></td>
+                                <td><input list="ques">
+                                    <datalist id="ques">
+                                        <option value="Câu hỏi 1">
+                                        <option value="Câu hỏi 2">
+                                        <option value="Câu hỏi 3">
+                                        <option value="Câu hỏi 4">
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="ans"><span>Email Thay Thế Khác</span></label></td>
+                                <td><input type="text" id="ans"></td>
+                            </tr>
+                        </table>
+                    
+                    </article>
+                    <hr>
+                    <article>
+                        <p>Chỉ còn một số chi tiết nữa</p>
+                        <table class="ads">
+                            <tr>
+                                <td class="ckbox">
+                                    <p>Các lựa chọn ưu tiên về tiếp thị</p>
+                                </td>
+                                <td class="btn-check"> <input type="checkbox" id="accept">       </td>                   
+                                <td> <label for="accept" class="label-inline">
+                                    <span>Đôi khi Công ty 
+                                    Compas có thể liên lạc với tôi về các chương trình chào 
+                                    hàng đặc biệt các chương trình khuyến mãi và các tính năm Yahoo!
+                                    </span>
+                                </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="sub">
+                        <input type="submit" value="Đăng Kí">
+                    </article>
+                </section>
+            </form>
+        </main>
+        <!-- MAIN END -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 - Chương 2</title>
+    <script src="Jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                strNgay = $(".ngay").val();
+                strThang = $(".thang").children("option:selected").text();
+                strNam = $(".nam").val();
+                ngay = parseInt(strNgay);
+                thang = parseInt(strThang);
+                nam = parseInt(strNam);
+
+                var tongSoNgay = 0;
+                //truong hop nam > 1970
+                if (nam > 1970) {
+                    for (var i = 1970; i < nam; i++) {
+                        if (kiemTraNamNhuan(i) == true)
+                            tongSoNgay += 366;
+                        else
+                            tongSoNgay += 365;
+                    }
+
+                    //tong so ngay trong nam nhap vao
+                    tongSoNgay += tinhTongNgay(nam, thang, ngay) - 1;
+                } else if (nam == 1970) {
+                    tongSoNgay = tinhTongNgay(nam, thang, ngay) - 1;
+                } else {
+                    for (var i = 1969; i > nam; i--) {
+                        if (kiemTraNamNhuan(i) == true)
+                            tongSoNgay += 366;
+                        else
+                            tongSoNgay += 365;
+                    }
+                    var soNgayNamNhapVao = 0;
+                    if (kiemTraNamNhuan(nam) == true)
+                        soNgayNamNhapVao = 366;
+                    else
+                        soNgayNamNhapVao = 365;
+
+                    tongSoNgay = tongSoNgay + soNgayNamNhapVao - (tinhTongNgay(nam, thang, ngay) - 1);
+                }
+                var soDu = tongSoNgay % 7;
+                var thu = "";
+                if (nam >= 1970) {
+                    switch (soDu) {
+                        case 0:
+                            thu = "Nam";
+                            break;
+                        case 1:
+                            thu = "Sau";
+                            break;
+                        case 2:
+                            thu = "Bay";
+                            break;
+                        case 3:
+                            thu = "Chu Nhat";
+                            break;
+                        case 4:
+                            thu = "Hai";
+                            break;
+                        case 5:
+                            thu = "Ba";
+                            break;
+                        case 6:
+                            thu = "Tu";
+                            break;
+                    }
+                } else {
+                    switch (soDu) {
+                        case 0:
+                            thu = "Nam";
+                            break;
+                        case 1:
+                            thu = "Tu";
+                            break;
+                        case 2:
+                            thu = "Ba";
+                            break;
+                        case 3:
+                            thu = "Hai";
+                            break;
+                        case 4:
+                            thu = "Chu Nhat";
+                            break;
+                        case 5:
+                            thu = "Bay";
+                            break;
+                        case 6:
+                            thu = "Sau";
+                            break;
+                    }
+                }
+                //document.getElementsByClassName(".thuMay").innerHTML = thu;
+                //$(".thuMay").val(thu);
+                $(".thuMay").html(thu);
+            })
+        })
+
+        function kiemTraNamNhuan(nam) {
+            var namNhuan = false;
+            if ((nam % 100 == 0 && nam % 400 == 0) || (nam % 100 != 0 && nam % 4 == 0))
+                return true;
+            else
+                return false;
+        }
+
+        function tinhTongNgay() {
+            var namNhuan = false;
+
+            if ((nam % 100 == 0 && nam % 400 == 0) || (nam % 100 != 0 && nam % 4 == 0))
+                namNhuan = true;
+            else
+                namNhuan = false;
+
+            var tongNgay = 0;
+
+            var soNgayThang2 = 0;
+
+            if (thang == 1)
+                tongNgay = ngay;
+            else {
+                for (var i = 1; i < thang; i++) {
+                    if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+                        tongNgay += 31;
+                    } else if (i == 2) {
+                        if (namNhuan == true)
+                            tongNgay += 29;
+                        else
+                            tongNgay += 28;
+                    } else {
+                        tongNgay += 30;
+                    }
+                }
+                tongNgay += ngay;
+            }
+
+            return tongNgay;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table style="border: 1px solid red;">
+                <tr>
+                    <td>Ngày <input type="text" class="ngay"></td>
+                    <td>Tháng <select name="" class="thang">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="5">9</option>
+                        <option value="6">10</option>
+                        <option value="7">11</option>
+                        <option value="8">12</option>
+                    </select></td>
+                    <td>
+                        Năm <input type="text" class="nam">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="button" value="Xuất thứ" class="btn"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="thuMay"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

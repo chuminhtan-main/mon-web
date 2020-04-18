@@ -1,0 +1,39 @@
+#wrapper{
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+h4{
+    text-align: center;
+    color: #006699;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #000099;
+}
+
+.form-login{
+    width: 80%;
+    margin: 20px auto;
+}
+
+label{
+    margin-left: 20px;
+}
+input{
+    padding: 7px 7px;
+    margin-left: 50px;
+}
+#sub{
+    border: none;
+    border-radius: 12px;
+}
+.forgot-reg{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-style: italic;
+}
